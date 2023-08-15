@@ -13,6 +13,7 @@ class Pokemon():
     specialAtk = 0
     defensa = 0
     id = 0
+    img = ""
 
     def __init__(self):
         res = ""
@@ -23,6 +24,7 @@ class Pokemon():
             res = requests.get(url)
             if "200" in str(res):
                 data = res.json()
+                self.img = data['sprites']['front_default']
                 self.nombre = data['forms'][0]['name']
                 self.vida = data['stats'][0]['base_stat']
                 self.velocidad = data['stats'][5]['base_stat']
@@ -33,11 +35,12 @@ class Pokemon():
                 if len(data["types"]) > 1:
                     self.tipo2 = data['types'][1]['type']['name']
                 
-                print(self.nombre, self.vida, self.id,self.velocidad,self.tipo1,self.tipo2)
 
-for i in range(10):
-    pk = Pokemon()
-    lista.append(pk)
+if __name__ == '__main__':                
 
-for i in lista:
-    print(i.nombre)
+    for i in range(10):
+        pk = Pokemon()
+        lista.append(pk)
+
+    for i in lista:
+        print(i.nombre)
