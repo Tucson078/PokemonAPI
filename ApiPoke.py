@@ -15,7 +15,7 @@ class Pokemon():
     id = 0
     img = ""
 
-    def __init__(self):
+    def obtenerDatosPoke(self):
         res = ""
         while "200" not in str(res):
             self.id = random.randint(1, 1281)
