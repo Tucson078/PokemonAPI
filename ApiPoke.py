@@ -11,6 +11,7 @@ class Pokemon():
     tipo2 = ""
     atk = 0
     specialAtk = 0
+    specialDefensa = 0
     defensa = 0
     id = 0
     img = ""
@@ -32,6 +33,7 @@ class Pokemon():
                 self.specialAtk = data['stats'][3]['base_stat']
                 self.defensa = data['stats'][2]['base_stat']
                 self.tipo1 = data['types'][0]['type']['name']
+                self.specialDefensa = data['stats'][4]['base_stat']
                 if len(data["types"]) > 1:
                     self.tipo2 = data['types'][1]['type']['name']
                 
