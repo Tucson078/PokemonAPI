@@ -16,15 +16,17 @@ class Pokemon():
     id = 0
     img = ""
 
-    def obtenerDatosPoke(self):
+    def obtenerDatosPoke(self, id):
+        self.id = id
         res = ""
         while "200" not in str(res):
-            self.id = random.randint(1, 1281)
+            #self.id = random.randint(1, 1281)
             
             url = f"https://pokeapi.co/api/v2/pokemon/{self.id}/"
             res = requests.get(url)
             if "200" in str(res):
                 data = res.json()
+                print(data)
                 self.img = data['sprites']['front_default']
                 self.nombre = data['forms'][0]['name']
                 self.vida = data['stats'][0]['base_stat']
