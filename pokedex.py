@@ -10,7 +10,7 @@ import tkinter as tk
 class Pokedex():
     nombrepoke = ""
     image_url = ""
-
+    id_inicial = 445
 
     def __init__(self):
         self.pokedexx = tkinter.Tk()
@@ -59,8 +59,7 @@ class Pokedex():
         self.fila5.grid(column=0, row=4)
         self.fila6.grid(column=0, row=5)
 
-        self.a = Pokemon()
-        self.a.obtenerDatosPoke(445)
+        self.a = Pokemon(self.id_inicial)
 
         self.f7 = tkinter.Frame(self.pokedexx,bg="Red", width=350, height=500)
         self.f7.grid(column=0,row=7)

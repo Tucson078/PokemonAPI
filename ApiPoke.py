@@ -15,6 +15,11 @@ class Pokemon():
     defensa = 0
     id = 0
     img = ""
+    
+
+    def __init__(self,id):
+        self.obtenerDatosPoke(id)
+        
 
     def obtenerDatosPoke(self, id):
         self.id = id
@@ -38,13 +43,12 @@ class Pokemon():
                 self.specialDefensa = data['stats'][4]['base_stat']
                 if len(data["types"]) > 1:
                     self.tipo2 = data['types'][1]['type']['name']
-                
+    
+    def __repr__(self):
+        return f'{self.nombre} - {self.id}'
 
 if __name__ == '__main__':                
 
-    for i in range(10):
-        pk = Pokemon()
-        lista.append(pk)
-
-    for i in lista:
-        print(i.nombre)
+    pk = Pokemon(1)
+    pk2 = Pokemon(2)
+    print(pk)
