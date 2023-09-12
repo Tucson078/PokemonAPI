@@ -15,6 +15,7 @@ class Pokemon():
     defensa = 0
     id = 0
     img = ""
+    imgEspalda = ""
     
 
     def __init__(self,id):
@@ -41,14 +42,15 @@ class Pokemon():
                 self.defensa = data['stats'][2]['base_stat']
                 self.tipo1 = data['types'][0]['type']['name']
                 self.specialDefensa = data['stats'][4]['base_stat']
+                self.imgEspalda = data['sprites']['back_default']
                 if len(data["types"]) > 1:
                     self.tipo2 = data['types'][1]['type']['name']
     
     def __repr__(self):
         return f'{self.nombre} - {self.id}'
 
-if __name__ == '__main__':                
+#if __name__ == '__main__':                
 
-    pk = Pokemon(1)
-    pk2 = Pokemon(2)
-    print(pk)
+#    pk = Pokemon(1)
+#    pk2 = Pokemon(2)
+#    print(pk)
