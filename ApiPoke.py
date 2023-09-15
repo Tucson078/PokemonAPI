@@ -20,6 +20,7 @@ class Pokemon():
 
     def __init__(self,id):
         self.obtenerDatosPoke(id)
+        print(f"datos obtenidos pokemon {self.nombre}")
         
 
     def obtenerDatosPoke(self, id):
@@ -49,8 +50,7 @@ class Pokemon():
     def __repr__(self):
         return f'{self.nombre} - {self.id}'
 
-#if __name__ == '__main__':                
-
-#    pk = Pokemon(1)
-#    pk2 = Pokemon(2)
-#    print(pk)
+if __name__ == '__main__':                
+    pk = Pokemon(1)
+    pk2 = Pokemon(2)
+    print(pk.img)
