@@ -2,9 +2,12 @@ import tkinter
 import requests
 from PIL import Image,ImageTk
 from io import BytesIO
+from Jogador import Jugador
 
 class Pantalla:   
 
+    jg1 = Jugador()
+    jg2 = Jugador()
     image_url = ""    
     anchoBanco = 90
     altoBanco = 120
@@ -17,14 +20,18 @@ class Pantalla:
         self.FramePadre = tkinter.Frame(self.juego,bg="White")
         self.FramePadre.grid(column=0,row=1)
 
-        self.Pelea = tkinter.Frame(self.FramePadre, bg="Black",width=400,height=600)
+        self.Pelea = tkinter.Frame(self.FramePadre, bg="white",width=400,height=600)
         self.Pelea.grid()
 
         self.fp1 = tkinter.Frame(self.Pelea,bg="red",width=133,height=120)
         self.fp1.grid(row=0,column=0)
+        self.lp1 = tkinter.Label(self.fp1,bg="White")
+        self.lp1.grid(row=0,column=0)
         self.fp2 = tkinter.Frame(self.Pelea,bg="white",width=133,height=120)
         self.fp2.grid(row=0,column=1)
         self.fp3 = tkinter.Frame(self.Pelea,bg="white",width=133,height=120)
+        self.lp3 = tkinter.Label(self.fp3,bg="White")
+        self.lp3.grid(row=0,column=0)
         self.fp3.grid(row=0,column=2)
         self.fp4 = tkinter.Frame(self.Pelea,bg="white",width=133,height=120)
         self.fp4.grid(row=1,column=0)
@@ -33,6 +40,8 @@ class Pantalla:
         self.fp6 = tkinter.Frame(self.Pelea,bg="white",width=133,height=120)
         self.fp6.grid(row=1,column=2)
         self.fp7 = tkinter.Frame(self.Pelea,bg="white",width=133,height=120)
+        self.lp7 = tkinter.Label(self.fp7,bg="White")
+        self.lp7.grid(row=0,column=0)
         self.fp7.grid(row=2,column=0)
         self.fp8 = tkinter.Frame(self.Pelea,bg="white",width=133,height=120)
         self.fp8.grid(row=2,column=1)
@@ -88,6 +97,9 @@ class Pantalla:
         frame.config(image=photo)
         frame.image = photo
 
+    def mostrarInfo(self,pokemon1,pokemon2):
+        self.lp1.config(text="Vida: " + str(pokemon1.vida) +"\n"+"Id: " + str(pokemon1.id))
+        
 
     def actualizarPantalla(self):
 
