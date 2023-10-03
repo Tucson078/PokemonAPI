@@ -47,6 +47,8 @@ class Pantalla:
         self.fp8.grid(row=2,column=1)
         self.fp9 = tkinter.Frame(self.Pelea,bg="red",width=133,height=120)
         self.fp9.grid(row=2,column=2)
+        self.lp9 = tkinter.Label(self.fp9,bg="White")
+        self.lp9.grid(row=0,column=0)
 
         self.Lineauwu = tkinter.Frame(self.FramePadre, bg="Blue",width=400,height=10)
         self.Lineauwu.grid()
@@ -54,13 +56,13 @@ class Pantalla:
         self.Ataques = tkinter.Frame(self.FramePadre, bg="White",width=400,height=600)
         self.Ataques.grid()
 
-        self.ft1 = tkinter.Frame(self.Ataques,bg="black",width=100,height=100)
+        self.ft1 = tkinter.Button(self.Ataques,bg="black",width=100,height=100)
         self.ft1.grid(row=0,column=0)
-        self.ft2 = tkinter.Frame(self.Ataques,bg="white",width=100,height=100)
+        self.ft2 = tkinter.Button(self.Ataques,bg="white",width=100,height=100)
         self.ft2.grid(row=0,column=1)
-        self.ft3 = tkinter.Frame(self.Ataques,bg="black",width=100,height=100)
+        self.ft3 = tkinter.Button(self.Ataques,bg="black",width=100,height=100)
         self.ft3.grid(row=0,column=2)
-        self.ft4 = tkinter.Frame(self.Ataques,bg="white",width=100,height=100)
+        self.ft4 = tkinter.Button(self.Ataques,bg="white",width=100,height=100)
         self.ft4.grid(row=0,column=3)
 
         self.Lineauwu2 = tkinter.Frame(self.FramePadre, bg="Blue",width=400,height=10)
@@ -98,7 +100,9 @@ class Pantalla:
         frame.image = photo
 
     def mostrarInfo(self,pokemon1,pokemon2):
-        self.lp1.config(text="Vida: " + str(pokemon1.vida) +"\n"+"Id: " + str(pokemon1.id))
+        self.lp1.config(text="Vida: " + str(pokemon1.vida * 20) +"\n"+"Id: " + str(pokemon1.id))
+        self.lp9.config(text="Vida: " + str(pokemon2.vida * 20) +"\n"+"Id: " + str(pokemon2.id))
+        
         
 
     def actualizarPantalla(self):
@@ -112,6 +116,8 @@ class Pantalla:
         photo = ImageTk.PhotoImage(image)
         self.fp7.config(image=photo)
         self.fp7.image = photo
+
+    
         
 
 if __name__ == '__main__':

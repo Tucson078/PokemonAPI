@@ -1,0 +1,101 @@
+BICHO:
+da y vuelta.
+Doble rayo.
+Tijera X.
+Danza aleteo
+
+DRAGON:
+Pulso dragón
+Ráfaga escamas
+Rayo infinito
+Vasto impacto
+
+ELECTRICO:
+Puños plasma
+Rayo	
+Rayo carga
+Rayo fusión	
+
+HADA:
+Geocontrol
+Luz aniquiladora
+Luz lunar
+Niebla aromática	
+
+LUCHA:
+Golpe roca	
+Inversión	
+Llave corsé	
+Llave giro	
+
+FUEGO:
+Puño fuego	
+Rueda fuego	
+Sofoco	
+Lanzallamas
+
+VOLADOR:
+Ataque aéreo
+Ataque ala	
+Golpe aéreo
+Pico taladro
+
+FANTASMA:
+Puño sombra
+Puño fuego
+Bola sombra
+Impresionar
+
+PLANTA:
+Lluevehojas	
+Látigo cepa
+Drenadoras
+Espora
+
+TIERRA:
+Bofetón lodo
+Bomba fango	
+Excavar
+Terremoto
+
+HIELO:
+Lanza glacial	
+Martillo hielo
+Puño hielo
+Bola hielo
+
+NORMAL:
+Arañazo
+Ataque rápido
+Agarre
+Tambor
+
+VENENO:
+Búnker
+Carga tóxica	
+Envenenar
+Bomba ácida	
+
+PSIQUICO:
+Agilidad
+Bola neblina
+Danza lunar
+Psicoataque
+
+ROCA:
+Pedrada
+Lanzarrocas
+Tumba rocas
+Roca veloz
+
+ACERO:
+Giro bola
+Puño bala
+Cuerpo pesado
+Garra metal
+
+AGUA:
+Burbuja
+Pistola de agua
+Hidrobomba
+Hidropulso
