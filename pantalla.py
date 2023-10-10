@@ -14,7 +14,7 @@ class Pantalla:
     def __init__(self):
         self.juego = tkinter.Tk()
         self.juego.title("Jogo?")
-        self.juego.geometry("400x600")
+        self.juego.geometry("545x600")
         #self.juego.resizable(False,False)
 
         self.FramePadre = tkinter.Frame(self.juego,bg="White")
@@ -53,22 +53,19 @@ class Pantalla:
         self.Lineauwu = tkinter.Frame(self.FramePadre, bg="Blue",width=400,height=10)
         self.Lineauwu.grid()
 
-        self.Ataques = tkinter.Frame(self.FramePadre, bg="White",width=400,height=600)
-        self.Ataques.grid()
+        #self.ft1 = tkinter.Button(self.Ataques,bg="black",width=100,height=100)
+        #self.ft1.grid(row=0,column=0)
+        #self.ft2 = tkinter.Button(self.Ataques,bg="white",width=100,height=100)
+        #self.ft2.grid(row=0,column=1)
+        #self.ft3 = tkinter.Button(self.Ataques,bg="black",width=100,height=100)
+        #self.ft3.grid(row=0,column=2)
+        #self.ft4 = tkinter.Button(self.Ataques,bg="white",width=100,height=100)
+        #self.ft4.grid(row=0,column=3)
 
-        self.ft1 = tkinter.Button(self.Ataques,bg="black",width=100,height=100)
-        self.ft1.grid(row=0,column=0)
-        self.ft2 = tkinter.Button(self.Ataques,bg="white",width=100,height=100)
-        self.ft2.grid(row=0,column=1)
-        self.ft3 = tkinter.Button(self.Ataques,bg="black",width=100,height=100)
-        self.ft3.grid(row=0,column=2)
-        self.ft4 = tkinter.Button(self.Ataques,bg="white",width=100,height=100)
-        self.ft4.grid(row=0,column=3)
-
-        self.Lineauwu2 = tkinter.Frame(self.FramePadre, bg="Blue",width=400,height=10)
+        self.Lineauwu2 = tkinter.Frame(self.FramePadre, bg="Blue",width=545,height=10)
         self.Lineauwu2.grid()
 
-        self.Cambiopoke = tkinter.Frame(self.FramePadre, bg="Blue",width=400,height=120)
+        self.Cambiopoke = tkinter.Frame(self.FramePadre, bg="Blue",width=545,height=120)
         self.Cambiopoke.grid()
 
 
@@ -87,10 +84,22 @@ class Pantalla:
 
         self.bancoDeSuplentes = [self.cp1, self.cp2, self.cp3, self.cp4, self.cp5, self.cp6]
         
-        self.Lineauwu3 = tkinter.Frame(self.FramePadre, bg="Violet",width=400,height=10)
+        self.Lineauwu3 = tkinter.Frame(self.FramePadre, bg="Violet",width=545,height=10)
         self.Lineauwu3.grid()
 
+        self.Ataques = tkinter.Frame(self.FramePadre,bg = "White",width=545,height=50)
+        self.Ataques.grid()
 
+        self.ft1 = tkinter.Button(self.Ataques,bg="black",width=15,height=50)
+        self.ft1.grid(row=0,column=0)
+        self.ft2 = tkinter.Button(self.Ataques,bg="white",width=15,height=50)
+        self.ft2.grid(row=0,column=1)
+        self.ft3 = tkinter.Button(self.Ataques,bg="black",width=15,height=50)
+        self.ft3.grid(row=0,column=2)
+        self.ft4 = tkinter.Button(self.Ataques,bg="white",width=15,height=50)
+        self.ft4.grid(row=0,column=3)
+
+        
     def insertarFoto(self, frame, url):
         response = requests.get(url)
         image_data = BytesIO(response.content)
