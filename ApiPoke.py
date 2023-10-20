@@ -16,6 +16,10 @@ class Pokemon():
     id = 0
     img = ""
     imgEspalda = ""
+    ataque1 = ""
+    ataque2 = ""
+    ataque3 = ""
+    ataque4 = ""
     
 
     def __init__(self,id):

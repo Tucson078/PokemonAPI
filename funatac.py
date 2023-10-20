@@ -4,5 +4,5 @@ Doble rayo.
 Tijera X.
 Danza aleteo
 
-def calcularEfectividadFuego():
-        
+def calcularAcero():
+    if 
