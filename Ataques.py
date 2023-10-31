@@ -153,15 +153,150 @@ def lanzaRoca():
     prioridad = 1
     usos = 15
 
-Fuego6= ["Puño fuego","Rueda fuego","SofocoLanzallamas"]
+Fuego6= ["Puño fuego","Rueda fuego","Sofoco","Lanzallamas"]
+    
+def puñoFuego():
+    tipo = 6
+    daño = 75
+    precision = 100
+    prioridad = 0
+    usos = 15
+    quemar = 10
+
+def ruedaFuego():
+    tipo = 6
+    daño = 60
+    precision = 100
+    prioridad = 0
+    usos = 24
+    quemar = 10
+
+def sofoco():
+    tipo = 6
+    daño = 130
+    precision = 90
+    prioridad = 0
+    usos = 8
+    quemar = 10
+
+def lanzaLLamas():
+    tipo = 6
+    daño = 90
+    precision = 100
+    prioridad = 0
+    usos = 20
+    quemar = 10
 
 Volador7 = ["Ataque aéreo","Ataque ala","Golpe aéreo","Pico taladro"]
 
+def ataqueAereo():
+    tipo = 7
+    daño = 140
+    precision = 90
+    prioridad = 0
+    usos = 5
+
+def ataqueAla():
+    tipo = 7
+    daño = 60
+    precision = 100
+    prioridad = 0
+    usos = 40
+
+def golpeAereo():
+    tipo = 7
+    daño = 10
+    precision = 30
+    prioridad = 0
+    usos = 8
+
+def picoTaladro():
+    tipo = 7
+    daño = 80
+    precision = 100
+    prioridad = 0
+    usos = 20
+
 Fantasma8 =  ["Puño sombra","Puño fuego","Bola sombra","Impresionar"]
+
+def puñoSombra():
+    tipo = 8
+    daño = 60
+    precision = 100
+    prioridad = 0
+    usos = 24
+
+def robaSombra():
+    tipo = 8
+    daño = 80
+    precision = 80
+    prioridad = 0
+    usos = 20
+    cura = 200
+
+def bolaSombra():
+    tipo = 8
+    daño = 80
+    precision = 100
+    prioridad = 0
+    usos = 20
+    menosDef = 20
+
+def impresionar():
+    tipo = 8
+    daño = 30
+    precision = 100
+    prioridad = 0
+    usos = 12
+    asustar = 20
 
 Planta9 = ["Llueve hojas","Látigo cepa","Drenadoras","Espora"]
 
+def llueveHojas():
+    tipo = 9
+    daño = 130
+    precision = 80
+    prioridad = 0
+    usos = 5
+
+def latigoCepa():
+    tipo = 9
+    daño = 45
+    precision = 100
+    prioridad = 0 
+    usos = 40
+
 Tierra10 = ["Bofetón lodo","Bomba fango","Excavar","Terremoto"]
+
+def bofetonLodo():
+    tipo = 10
+    daño =  30
+    precision = 100
+    prioridad = 0
+    menosPrecision = 15
+    usos = 8
+
+def bombaFango():
+    tipo = 10
+    daño = 65
+    precision = 85
+    prioridad = 0
+    menosPrecision = 30
+    usos = 8
+
+def excavar():
+    tipo = 10
+    daño = 85
+    precision = 100
+    prioridad = 0
+    usos = 20
+
+def terremoto():
+    tipo = 10
+    daño = 130
+    precision = 90
+    prioridad = 0
+    usos = 10
 
 Hielo11 =  ["Lanza glacial","Martillo hielo","Puño hielo","Bola hielo"]
 
