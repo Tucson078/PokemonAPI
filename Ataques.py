@@ -300,14 +300,218 @@ def terremoto():
 
 Hielo11 =  ["Lanza glacial","Martillo hielo","Puño hielo","Bola hielo"]
 
+def lanzaGlacial():
+    tipo = 11
+    daño = 120
+    precision = 100
+    prioridad = 0
+    usos = 5
+
+def martilloHielo():
+    tipo = 11
+    daño = 100
+    precision = 90
+    prioridad = 0
+    usos = 16
+
+def puñoHielo():
+    tipo = 11
+    daño = 75
+    precision = 100
+    prioridad = 0
+    usos = 20
+
+def bolaHielo():
+    tipo = 11
+    daño = 40
+    precision = 100
+    prioridad = 0
+    usos = 10
+    congelar = 10
+
 Normal12 = ["Arañazo","Ataque rápido","Agarre","Tambor"]
+
+def arañazo():
+    tipo = 12
+    daño = 40
+    precision = 100
+    prioridad = 0
+    usos = 20
+
+def ataqueRapido():
+    tipo = 12
+    daño = 40
+    precision = 100
+    prioridad = 1
+    usos = 30
+
+def tambor():
+    tipo = 12
+    dañopropio = 0.5
+    prioridad = 0
+    usos = 8
+    aumento = 2
+
+def agarre():
+    tipo = 12
+    daño = 100
+    precision = 100
+    prioridad = 0
+    usos = 20
+     
+
 
 Veneno13 = ["Búnker","Carga tóxica","Envenenar","Bomba ácida"]
 
+def bunker():
+    tipo = 13
+    daño = 0
+    precision = 100
+    dañorival = 0
+    prioridad = 1
+    usos = 8
+
+def cargaToxica():
+    tipo = 13
+    daño = 45
+    precision = 100
+    prioridad = 0
+    usos = 30
+
+def envenenar():
+    tipo = 13
+    daño = 20
+    aumentoDeDaño = 2
+    precision = 80
+    prioridad = 0
+    usos = 10
+
+def bombaAcida():
+    tipo = 13
+    daño = 50
+    precision = 100
+    prioridad = 0
+    usos = 20
+
 Psiquico14 = ["Agilidad","Bola neblina","Danza lunar","Psicoataque"]
+
+def agilidad()
+    tipo = 14
+    daño = 0
+    aumento = 2
+    prioridad = 0
+    precision = 100
+    usos = 4
+
+def bolaNeblina():
+    tipo = 14
+    daño = 120
+    precision = 80
+    prioridad = 0
+    usos = 8
+
+def danzaLunar():
+    tipo = 14
+    daño = 0
+    precision = 100
+    prioridad = 0
+    usos = 8
+    aumento = 1.5
+
+def psicoAtaque():
+    tipo = 14
+    daño = 80
+    precision = 100
+    prioridad = 0 
+    usos = 20
 
 Roca15 = ["Pedrada","Lanzarrocas","Tumba rocas","Roca veloz"]
 
+def pedrada():
+    tipo = 15
+    daño = 90
+    precision = 100
+    prioridad = 0
+    usos = 20
+
+def lanzaRocas():
+    tipo = 15
+    daño = 30
+    precision = 100
+    prioridad = 0
+    usos = 15
+
+def tumbaRocas():
+    tipo = 15
+    daño = 150
+    precision = 60
+    prioridad = 0
+    usos = 8
+
+def rocaVeloz():
+    tipo = 15
+    daño = 50
+    precision = 100
+    prioridad = 1
+    usos = 20
+
 Acero16 = ["Giro bola","Puño bala","Cuerpo pesado","Garra metal"]
 
+def giroBola():
+    tipo = 16
+    daño = 80
+    precision = 100
+    prioridad = 0
+    usos = 15
+
+def puñoBala():
+    tipo = 16
+    daño = 100
+    precision = 100
+    prioridad = 0
+    usos = 10
+
+def cuerpoPesado():
+    tipo = 16
+    daño = 200
+    precision = 100
+    prioridad = 0
+    usos = 2
+
+def garraMetal():
+    tipo = 16
+    daño = 40
+    precision = 100
+    prioridad = 1
+    usos = 10
+
 Agua17 = ["Burbuja","Pistola de agua","Hidrobomba","Hidropulso"]
+
+def burbuja():
+    tipo = 17
+    daño = 0
+    precision = 100
+    prioridad = 0
+    usos = 4
+    aumento = 1.5
+
+def pistolaDeAgua():
+    tipo = 17
+    daño = 60
+    precision = 100
+    prioridad = 1
+    usos = 30
+
+def hidroBomba():
+    tipo = 17
+    daño = 100
+    precision = 100
+    prioridad = 0
+    usos = 20
+
+def hidroPulso():
+    tipo = 17
+    daño = 150 
+    precision = 80
+    prioridad = 0
+    usos = 5
