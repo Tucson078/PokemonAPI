@@ -14,6 +14,7 @@ class Jugador:
             id = randint(1,1000)
             self.pk = Pokemon(id)
             self.mochila.append(self.pk)
+        if se
 
 
 
@@ -21,10 +22,10 @@ class Jugador:
 
 #print(jugador1.mochila)
 
-#jugador2 = Jugador()
-#print(jugador2.mochila)
+jugador2 = Jugador()
 
-#print(jugador2.mochila[3].atk)
+
+print(jugador2.mochila[3].tipo2)
 
 
 

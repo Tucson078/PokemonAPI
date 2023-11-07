@@ -1,8 +1,7 @@
-BICHO:
-da y vuelta.
-Doble rayo.
-Tijera X.
-Danza aleteo
+from Jogador import Jugador
 
-def calcularAcero():
-    if 
+class Ataque:
+    def __init__(self):
+        self.jg = Jugador()
+        
+

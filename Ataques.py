@@ -1,221 +1,92 @@
 Bicho1 = ["Ida y vuelta","Doble rayo","Tijera X","Danza aleteo"]
 
-def idaYVuelta():
-    tipo = 1
-    daño = 70
-    precision = 100
-    prioridad = 0
-    usos = 20
 
-def dobleRayo():
-    tipo = 1
-    daño = 75
-    precision = 100
-    prioridad = 0
-    usos = 20
 
-def tijeraX():
-    tipo = 1
-    daño = 80
-    precision = 100
-    prioridad = 0
-    usos = 15
+idaYVuelta = {"tipo": 1,"danio": 70,"precision": 100,"prioridad": 0,"usos": 20}
 
-def danzaAleteo():
-    tipo = 1
-    daño = 0 
-    precision = 100
-    prioridad = 0
-    usos = 10
-    aumento = 50
+dobleRayo = {"tipo": 1,"danio": 75,"precision": 100,"prioridad": 0,"usos": 20}
+    
+tijeraX = {"tipo": 1,"danio": 80,"precision": 100,"prioridad": 0,"usos": 15}
+
+danzaAleteo = {"tipo": 1,"danio": 0,"precision": 100,"prioridad": 0,"usos": 10,"aumento": 50}
 
 Dragon2 =  ["Pulso dragón","Ráfaga escamas","Rayo infinito","Vasto impacto"]
 
-def pulsoDragon():
-    tipo = 2
-    daño = 85
-    precision = 100
-    prioridad = 0
-    usos = 10
 
-def rafagaEscamas():
-    tipo = 2
-    daño = 25
-    cantGolpes = 0
-    precision = 100
-    prioridad = 0
-    usos = 32
 
-def rayoInfinito():
-    tipo = 2
-    daño = 160
-    precision = 90
-    prioridad = 0
-    usos = 8
+pulsoDragon = {"tipo": 2,"danio": 85,"precision": 100,"prioridad": 0,"usos": 10}
 
-def vastoImpacto():
-    tipo = 2
-    daño = 60
-    precision = 90
-    prioridad = 0
-    usos = 15
+rafagaEscamas = {"tipo": 2,"danio": 25,"cantGolpes": 0,"precision": 100,"prioridad": 0,"usos": 32}
+
+rayoInfinito = {"tipo": 2,"danio": 160,"precision": 90,"prioridad": 0,"usos": 8}
+
+vastoImpacto = {"tipo": 2, "danio": 60, "precision": 90, "prioridad": 0, "usos": 15}
+
 
 Eletrico3 = ["Puños plasma","Rayo","Rayo carga","Rayo fusión"]
 
-def puñosPlasma():
-    tipo = 3
-    daño = 100
-    precision = 100
-    prioridad = 0
-    usos = 15
 
-def rayo():
-    tipo = 3
-    daño = 90
-    precision = 100
-    prioridad = 0
-    usos = 15
 
-def rayoCarga():
-    tipo = 3
-    daño = 50
-    precision = 90
-    prioridad = 0
-    usos = 16
+puñosPlasma = {"tipo": 3, "danio": 100, "precision": 100, "prioridad": 0, "usos": 15}
 
-def rayoFusion():
-    tipo = 3
-    daño = 100
-    precision = 10
-    prioridad = 0
-    usos = 5
+rayo = {"tipo": 3, "danio": 90, "precision": 100, "prioridad": 0, "usos": 15}
+
+rayoCarga = {"tipo": 3, "danio": 50, "precision": 90, "prioridad": 0, "usos": 16}
+
+rayoFusion = {"tipo": 3, "danio": 100, "precision": 10, "prioridad": 0, "usos": 5}
+
 
 Hada4= ["Geocontrol", "Luz aniquiladora", "Luz lunar", "Niebla aromática"]
 
-def geocontrol():
-    tipo = 4
-    daño = 0
-    precision = 100
-    prioridad = 0
-    usos = 10
 
-def luzAniquiladora():
-    tipo = 4
-    daño = 140
-    precision = 90
-    prioridad = 0
-    usos = 8
+geocontrol = {"tipo": 4, "danio": 0, "precision": 100, "prioridad": 0, "usos": 10}
 
-def luzLunar():
-    tipo = 4
-    daño = 80
-    precision = 100
-    prioridad = 0
-    usos = 30
+luzAniquiladora = {"tipo": 4, "danio": 140, "precision": 90, "prioridad": 0, "usos": 8}
 
-def nieblaAromatica():
-    tipo = 4
-    daño = 0
-    precision = 100
-    prioridad = 0
-    usos = 10
-    bajada = 30
+luzLunar = {"tipo": 4, "danio": 80, "precision": 100, "prioridad": 0, "usos": 30}
+
+nieblaAromatica = {"tipo": 4, "danio": 0, "precision": 100, "prioridad": 0, "usos": 10, "bajada": 30}
+
 
 
 Lucha5 = ["Golpe roca","Inversión", "Llave corsé", "Lanza Roca"]
 
-def golpeRoca():
-    tipo = 5
-    daño = 40
-    precision = 100
-    prioridad = 0
-    usos = 14
-    bajada = 20
 
-def inversion():
-    tipo = 5
-    daño = 150
-    precision = 70
-    prioridad = 0
-    usos = 10
 
-def llaveCorse():
-    tipo = 5
-    daño = 80
-    precision = 100
-    prioridad = 0
-    usos = 10
+golpeRoca = {"tipo": 5, "danio": 40, "precision": 100, "prioridad": 0, "usos": 14, "bajada": 20}
 
-def lanzaRoca():
-    tipo = 5
-    daño = 70
-    precision = 100
-    prioridad = 1
-    usos = 15
+inversion = {"tipo": 5, "danio": 150, "precision": 70, "prioridad": 0, "usos": 10}
+
+llaveCorse = {"tipo": 5, "danio": 80, "precision": 100, "prioridad": 0, "usos": 10}
+
+lanzaRoca = {"tipo": 5, "danio": 70, "precision": 100, "prioridad": 1, "usos": 15}
+
 
 Fuego6= ["Puño fuego","Rueda fuego","Sofoco","Lanzallamas"]
     
-def puñoFuego():
-    tipo = 6
-    daño = 75
-    precision = 100
-    prioridad = 0
-    usos = 15
-    quemar = 10
 
-def ruedaFuego():
-    tipo = 6
-    daño = 60
-    precision = 100
-    prioridad = 0
-    usos = 24
-    quemar = 10
 
-def sofoco():
-    tipo = 6
-    daño = 130
-    precision = 90
-    prioridad = 0
-    usos = 8
-    quemar = 10
+puñoFuego = {"tipo": 6, "danio": 75, "precision": 100, "prioridad": 0, "usos": 15, "quemar": 10}
 
-def lanzaLLamas():
-    tipo = 6
-    daño = 90
-    precision = 100
-    prioridad = 0
-    usos = 20
-    quemar = 10
+ruedaFuego = {"tipo": 6, "danio": 60, "precision": 100, "prioridad": 0, "usos": 24, "quemar": 10}
+
+sofoco = {"tipo": 6, "danio": 130, "precision": 90, "prioridad": 0, "usos": 8, "quemar": 10}
+
+lanzaLLamas = {"tipo": 6, "danio": 90, "precision": 100, "prioridad": 0, "usos": 20, "quemar": 10}
+
 
 Volador7 = ["Ataque aéreo","Ataque ala","Golpe aéreo","Pico taladro"]
 
-def ataqueAereo():
-    tipo = 7
-    daño = 140
-    precision = 90
-    prioridad = 0
-    usos = 5
 
-def ataqueAla():
-    tipo = 7
-    daño = 60
-    precision = 100
-    prioridad = 0
-    usos = 40
 
-def golpeAereo():
-    tipo = 7
-    daño = 10
-    precision = 30
-    prioridad = 0
-    usos = 8
+ataqueAereo = {"tipo": 7, "danio": 140, "precision": 90, "prioridad": 0, "usos": 5}
 
-def picoTaladro():
-    tipo = 7
-    daño = 80
-    precision = 100
-    prioridad = 0
-    usos = 20
+ataqueAla = {"tipo": 7, "danio": 60, "precision": 100, "prioridad": 0, "usos": 40}
+
+golpeAereo = {"tipo": 7, "danio": 10, "precision": 30, "prioridad": 0, "usos": 8}
+
+picoTaladro = {"tipo": 7, "danio": 80, "precision": 100, "prioridad": 0, "usos": 20}
+
 
 Fantasma8 =  ["Puño sombra","Puño fuego","Bola sombra","Impresionar"]
 
@@ -395,7 +266,7 @@ def bombaAcida():
 
 Psiquico14 = ["Agilidad","Bola neblina","Danza lunar","Psicoataque"]
 
-def agilidad()
+def agilidad():
     tipo = 14
     daño = 0
     aumento = 2
@@ -515,3 +386,6 @@ def hidroPulso():
     precision = 80
     prioridad = 0
     usos = 5
+
+def calcularEfectividad():
+    
