@@ -98,6 +98,7 @@ class Pantalla:
 
         
     def insertarFoto(self, frame, url):
+        print(url)
         response = requests.get(url)
         image_data = BytesIO(response.content)
         image = Image.open(image_data)

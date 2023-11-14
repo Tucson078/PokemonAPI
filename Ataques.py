@@ -151,7 +151,8 @@ ataquesPorTipos = {
     'psychic' : {"agilidad":agilidad,"bolaNeblina":bolaNeblina,"danzaLunar":danzaLunar,"psicoAtaque":psicoAtaque},
     'rock' : {"pedrada":pedrada,"lanzaRocas":lanzaRocas,"tumbaRocas":tumbaRocas,"rocaVeloz":rocaVeloz},
     'steel' : {"giroBola":giroBola,"puñoBala":puñoBala,"cuerpoPesado":cuerpoPesado,"garraMetal":garraMetal},
-    'water' : {"burbuja":burbuja,"pistolaDeAgua":pistolaDeAgua,"hidroBombra":hidroBomba,"hidroPulso":hidroPulso}
+    'water' : {"burbuja":burbuja,"pistolaDeAgua":pistolaDeAgua,"hidroBombra":hidroBomba,"hidroPulso":hidroPulso},
+    'dark' : {"idaYVuelta":idaYVuelta,"dobleRayo":dobleRayo,"tijeraX":tijeraX,"danzaAleteo":danzaAleteo}
 }
 
 #print(ataquesPorTipos['bug']["dobleRayo"])

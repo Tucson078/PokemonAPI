@@ -1,5 +1,6 @@
 import requests
 import random
+from Ataques import *
 
 lista = []
 
@@ -16,15 +17,14 @@ class Pokemon():
     id = 0
     img = ""
     imgEspalda = ""
-    ataque1 = ""
-    ataque2 = ""
-    ataque3 = ""
-    ataque4 = ""
+    ataques = {}
+        
     
 
     def __init__(self,id):
         self.obtenerDatosPoke(id)
-        print(f"datos obtenidos pokemon {self.nombre}")
+        #print(f"datos obtenidos pokemon {self.nombre}")
+        self.obtenerAtaque()
         
 
     def obtenerDatosPoke(self, id):
@@ -51,10 +51,43 @@ class Pokemon():
                 if len(data["types"]) > 1:
                     self.tipo2 = data['types'][1]['type']['name']
     
+    def obtenerAtaque(self):
+        #obtengo los ataques del tipo 1
+        self.ataques = ataquesPorTipos[self.tipo1]
+        #si tiene tipo2 obtengo los ataques y tengo que eliminar 2 aleatorios y agregar 2 aleatorios de ataque 2
+        if self.tipo2:
+            #creo dos listas para guardar las claves de los diccionarios de ataques para agregar y quitar
+            listaQuitar = []
+            listaAgregar = []
+            #obtengo los ataques del tipo2
+            self.ataques2 = ataquesPorTipos[self.tipo2]
+            #mientras la listaQuitar tenga menos de dos elementos
+            while len(listaQuitar) < 2:
+
+                k = 0
+                pos = random.randint(0, 3 - len(listaQuitar))
+                for key in self.ataques:
+                    if k == pos and key not in listaQuitar:
+                        listaQuitar.append(key)
+                    k += 1            
+             
+            while len(listaAgregar) < 2: 
+                k2 = 0
+                pos2 = random.randint(0, 3 - len(listaAgregar))
+                for key2 in self.ataques2:
+                    if k2 == pos2 and key2 not in listaAgregar:
+                        listaAgregar.append(key2)
+                    k2 +=1
+
+            for j in range(2):
+                self.ataques.pop(listaQuitar[j])
+                self.ataques[listaAgregar[j]] = self.ataques2[listaAgregar[j]]
+        
+
     def __repr__(self):
         return f'{self.nombre} - {self.id}'
 
 if __name__ == '__main__':                
-    pk = Pokemon(1)
-    pk2 = Pokemon(2)
-    print(pk.img)
+    #pk = Pokemon(1)
+    pk2 = Pokemon(445)
+

@@ -18,13 +18,9 @@ class Jugador:
 
 
 #jugador1 = Jugador()
-
 #print(jugador1.mochila)
-
-#jugador2 = Jugador()
-
-
-#print(jugador2.mochila[3].tipo2)
+jugador2 = Jugador()
+print(jugador2.mochila[3].ataques)
 
 
 
