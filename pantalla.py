@@ -62,7 +62,7 @@ class Pantalla:
 
         
         
-        self.cp1 = tkinter.Button(self.Cambiopoke,bg="Orange",width=self.anchoBanco,height=self.altoBanco,)
+        self.cp1 = tkinter.Button(self.Cambiopoke,bg="Orange",width=self.anchoBanco,height=self.altoBanco)
         self.cp1.grid(row=0,column=0)
         self.cp2 = tkinter.Button(self.Cambiopoke,bg="White",width=self.anchoBanco,height=self.altoBanco)
         self.cp2.grid(row=0,column=1)
@@ -87,18 +87,16 @@ class Pantalla:
         self.Ataques = tkinter.Frame(self.FramePadre,bg = "White",width=555,height=50)
         self.Ataques.grid()
 
-        self.ft1 = tkinter.Button(self.Ataques,bg="black",width=14,height=50)
+        self.ft1 = tkinter.Button(self.Ataques,bg="black",width=14,height=5,fg="white")
         self.ft1.grid(row=0,column=0)
-        self.ft2 = tkinter.Button(self.Ataques,bg="white",width=14,height=50)
+        self.ft2 = tkinter.Button(self.Ataques,bg="white",width=14,height=5)
         self.ft2.grid(row=0,column=1)
-        self.ft3 = tkinter.Button(self.Ataques,bg="black",width=14,height=50)
+        self.ft3 = tkinter.Button(self.Ataques,bg="black",width=14,height=5,fg="white")
         self.ft3.grid(row=0,column=2)
-        self.ft4 = tkinter.Button(self.Ataques,bg="white",width=14,height=50)
+        self.ft4 = tkinter.Button(self.Ataques,bg="white",width=14,height=5)
         self.ft4.grid(row=0,column=3)
-
         
     def insertarFoto(self, frame, url):
-        print(url)
         response = requests.get(url)
         image_data = BytesIO(response.content)
         image = Image.open(image_data)
@@ -109,6 +107,18 @@ class Pantalla:
     def mostrarInfo(self,pokemon1,pokemon2):
         self.lp1.config(text="Vida: " + str(pokemon1.vida * 20) +"\n"+"Id: " + str(pokemon1.id))
         self.lp9.config(text="Vida: " + str(pokemon2.vida * 20) +"\n"+"Id: " + str(pokemon2.id))
+
+        # Nombres de los ataques para verificar si se están obteniendo correctamente
+        #print("Ataques del Pokémon 2:", list(pokemon1.ataques.keys()))
+
+        # Obtienen los nombres de los ataques del pokemon1 y los guarda en una lista
+        ataques_pokemon1 = list(pokemon1.ataques.keys()) # Convierte las claves (nombres de los ataques) del diccionario ataques del Pokémon en una lista.
+        botones = [self.ft1, self.ft2, self.ft3, self.ft4]
+        for i, boton in enumerate(botones): # enumerate(botones) recorre los botones lleva un registro de indice en la lista para asignar un valor a los botones
+            if i < len(ataques_pokemon1): #Si i es menor que la longitud de la lista de ataques del pokemon1. 
+                boton.config(text=ataques_pokemon1[i]) # si i válido en ataques_pokemon1, se configura el texto del botón.
+            else:
+                boton.config("")
         
         
 
@@ -123,6 +133,12 @@ class Pantalla:
         photo = ImageTk.PhotoImage(image)
         self.fp7.config(image=photo)
         self.fp7.image = photo
+
+
+
+        
+
+        
 
     
         

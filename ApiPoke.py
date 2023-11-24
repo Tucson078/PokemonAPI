@@ -52,36 +52,24 @@ class Pokemon():
                     self.tipo2 = data['types'][1]['type']['name']
     
     def obtenerAtaque(self):
-        #obtengo los ataques del tipo 1
-        self.ataques = ataquesPorTipos[self.tipo1]
-        #si tiene tipo2 obtengo los ataques y tengo que eliminar 2 aleatorios y agregar 2 aleatorios de ataque 2
-        if self.tipo2:
-            #creo dos listas para guardar las claves de los diccionarios de ataques para agregar y quitar
-            listaQuitar = []
-            listaAgregar = []
-            #obtengo los ataques del tipo2
-            self.ataques2 = ataquesPorTipos[self.tipo2]
-            #mientras la listaQuitar tenga menos de dos elementos
-            while len(listaQuitar) < 2:
+        if self.tipo2:  # Si el Pokémon tiene tipo 2 obtiene ataques de ambos tipos de elemento
+           self.ataques = {} # Diccionario vacio de ataques para almacenar donde la clave del diccionario es el nombre del ataque y el valor es el ataque en sí mismo.
+           ataques_tipo1 = ataquesPorTipos[self.tipo1]  # Obtiene los ataques del tipo 1 y 2 del diccionario ataquesPorTipos{}
+           ataques_tipo2 = ataquesPorTipos[self.tipo2] 
 
-                k = 0
-                pos = random.randint(0, 3 - len(listaQuitar))
-                for key in self.ataques:
-                    if k == pos and key not in listaQuitar:
-                        listaQuitar.append(key)
-                    k += 1            
-             
-            while len(listaAgregar) < 2: 
-                k2 = 0
-                pos2 = random.randint(0, 3 - len(listaAgregar))
-                for key2 in self.ataques2:
-                    if k2 == pos2 and key2 not in listaAgregar:
-                        listaAgregar.append(key2)
-                    k2 +=1
-
-            for j in range(2):
-                self.ataques.pop(listaQuitar[j])
-                self.ataques[listaAgregar[j]] = self.ataques2[listaAgregar[j]]
+        # Obtiene 2 ataques aleatorios del Pokemontipo 2 (Ejemplo 2 ataques de water y 2 de rock)
+           ataques_elegidos_tipo1 = random.sample(list(ataques_tipo1.keys()), 2) # Elige random 2 ataques del tipo 1 y 2 almacena sus claves en la lista.
+           ataques_elegidos_tipo2 = random.sample(list(ataques_tipo2.keys()), 2) # list convierte las claves (nombres de ataques) del diccionario ataques_tipo1 en una lista.
+        #La función sample() del módulo random selecciona elementos de la lista de claves sin repetición y los devuelve como una lista (ataques_elegidos_tipo1 en este caso).
+        
+        
+        # Agregar los ataques elegidos del tipo 1 y tipo 2 al diccionario de ataques{} del pokemon.
+           for ataque_tipo1 in ataques_elegidos_tipo1: # recorren los ataques elegidos de cada tipo
+                self.ataques[ataque_tipo1] = ataques_tipo1[ataque_tipo1] # los agrega al diccionario 
+           for ataque_tipo2 in ataques_elegidos_tipo2:
+                self.ataques[ataque_tipo2] = ataques_tipo2[ataque_tipo2] # Esto se hace para incluir los ataques seleccionados en el conjunto total de ataques del Pokémon.
+        else:
+            self.ataques = ataquesPorTipos[self.tipo1]  # Si el Pokémon es de tipo 1 va a obtener los 4 ataques de ese unico tipo.
         
 
     def __repr__(self):

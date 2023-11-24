@@ -1,11 +1,16 @@
+import tkinter as tk
 
-idaYVuelta = {"tipo": 1,"danio": 70,"precision": 100,"prioridad": 0,"usos": 20}
-dobleRayo = {"tipo": 1,"danio": 75,"precision": 100,"prioridad": 0,"usos": 20}  
-tijeraX = {"tipo": 1,"danio": 80,"precision": 100,"prioridad": 0,"usos": 15}
-danzaAleteo = {"tipo": 1,"danio": 0,"precision": 100,"prioridad": 0,"usos": 10,"aumento": 50}
+def mi_comando(nombre):
+    print(f"¡Hola, {nombre}!")
 
-ataquesPorTipos = {
-    'bug' : {"idaYVuelta":idaYVuelta,"dobleRayo":dobleRayo,"tijeraX":tijeraX,"danzaAleteo":danzaAleteo}
-}
+# Crear una ventana
+ventana = tk.Tk()
+ventana.title("Botón con Comando y Argumento")
 
-print(ataquesPorTipos['bug']["dobleRayo"])
+# Crear un botón con un comando que pasa un argumento
+nombre = "Usuario"
+boton = tk.Button(ventana, text="Saludar", command=lambda: mi_comando(nombre))
+boton.pack(pady=10)
+
+# Iniciar el bucle principal
+ventana.mainloop()
